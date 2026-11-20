@@ -41,13 +41,22 @@ def read_page() -> bytes:
     return data
 
 
+def verify_delivery(target: Path, data: bytes) -> bool:
+    """Re-read the delivered file and check it against the source page."""
+    written = target.read_bytes()
+    if written != data:
+        return False
+    return hashlib.sha256(written).hexdigest() == PAGE_SHA256
+
+
 def main() -> int:
     data = read_page()
     target = output_path()
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_bytes(data)
-    if target.read_bytes() != data:
-        print("delivered file differs from entry.png", file=sys.stderr)
+    if not verify_delivery(target, data):
+        print("delivered file failed verification against entry.png",
+              file=sys.stderr)
         return 1
     return 0
 
