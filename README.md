@@ -34,11 +34,11 @@ market moves in the footer.
   programmatically (PIL) at 2048×2048 and downscaled with a Lanczos resample
   to the final 1024×1024, saved as JPEG quality 93 with 4:4:4 chroma, then
   proofread letter by letter at full zoom.
-- The second design gives the page a colour magazine treatment: a
-  deep-crimson nameplate band with the title reversed out in cream, a navy
-  date strip with the date in gold, an oversized colour summit illustration
-  spanning the top width, a crimson pull-quote panel beside the lead deck,
-  tinted story cards and a navy briefs banner. Same stories, same texts.
+- The third design is a hybrid: the first design's page kept exactly,
+  with colour at the top only — a deep-crimson nameplate band with the
+  title reversed out in cream and a gold italic tagline, over a navy date
+  strip with the date in gold. Everything below the date strip is the
+  first design pixel for pixel. Same stories, same texts.
 - `main.py` (Python 3, standard library only) verifies the committed
   image's size and sha256, then copies it to `$MAKEFUN_OUTPUT_DIR/entry.png`
   (or `/output/entry.png`). It is deterministic: repeated runs produce
@@ -46,7 +46,7 @@ market moves in the footer.
 
 ## Files
 
-- `entry.png` — the finished image (JPEG-encoded, 1024×1024, 514,332 bytes,
+- `entry.png` — the finished image (JPEG-encoded, 1024×1024, 569,611 bytes,
   under the 1 MiB limit; the rules accept PNG or JPEG by magic bytes).
 - `main.py` — the entry program.
 - `SOURCES.md` — story-by-story sourcing and fact sheet.

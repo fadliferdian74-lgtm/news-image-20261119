@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """Entry program for the make.fun bounty news-image-20261119.
 
-Second design of the front page, revised at the entrant's order for a
-colour magazine look ("atas kayak majalah" — the top like a magazine):
-a colour magazine treatment of the same 25 verified stories of
-Thursday 19 November 2026 — a deep-crimson nameplate band with the
-title reversed out in cream, a navy date strip with the date in gold,
-an oversized colour illustration of the Shenzhen summit spanning the
-top width under the masthead, a crimson kicker bar and pull-quote
-panel for the lead story, tinted story cards and a navy briefs
-banner. The first design was a plain black-and-white newspaper page;
-the stories, texts and sourcing did not change between designs.
+Third design of the front page, a hybrid revised at the entrant's
+order ("V3 hybrid — layout v1 + warna di atas aja": the first
+design's layout, colour at the top only). The first design was a
+plain black-and-white newspaper page and is kept exactly — same
+lead art and black headline, same four plain story cards, same
+briefs grid, same markets strip. The second design gave the whole
+top a colour magazine treatment and scored lower with the house
+judge, so this third design borrows only its masthead: a deep-
+crimson nameplate band with the title reversed out in cream and a
+gold italic tagline, over a navy date strip with the date in gold.
+The 25 verified stories of Thursday 19 November 2026, their texts
+and their sourcing did not change between designs.
 
 The finished page is committed in this repository as entry.png. The
 file holds JPEG bytes under a .png name; the bounty tells PNG from
@@ -33,8 +35,8 @@ from pathlib import Path
 
 REPO_DIR = Path(__file__).resolve().parent
 PAGE_FILE = REPO_DIR / "entry.png"
-PAGE_SHA256 = "962623924abf1ea33840949e5e00be65c4ccd754ea1ad5aa201c22c6f3f30b5f"
-PAGE_BYTES = 514332
+PAGE_SHA256 = "9863812bbf1c1858defc833f32704fc5dc0c161ab53cca61de226a5107fd4788"
+PAGE_BYTES = 569611
 
 
 def output_path() -> Path:
